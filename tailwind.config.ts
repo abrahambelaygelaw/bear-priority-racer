@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -46,6 +47,15 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          hover: "hsl(var(--card-hover))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -80,10 +90,79 @@ export default {
             height: "0",
           },
         },
+        "bear-race": {
+          "0%": {
+            transform: "translateY(100vh) scale(0.8)",
+          },
+          "100%": {
+            transform: "translateY(0) scale(1)",
+          },
+        },
+        "bear-legs": {
+          "0%, 100%": {
+            transform: "scaleX(1)",
+          },
+          "50%": {
+            transform: "scaleX(1.1)",
+          },
+        },
+        "card-flip": {
+          "0%": {
+            transform: "rotateY(0) scale(1)",
+          },
+          "50%": {
+            transform: "rotateY(90deg) scale(0.95)",
+          },
+          "100%": {
+            transform: "rotateY(0) scale(1)",
+          },
+        },
+        "bounce-in": {
+          "0%": {
+            transform: "scale(0.3) translateY(50px)",
+            opacity: "0",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+            opacity: "1",
+          },
+          "70%": {
+            transform: "scale(0.95)",
+          },
+          "100%": {
+            transform: "scale(1) translateY(0)",
+            opacity: "1",
+          },
+        },
+        "celebration": {
+          "0%, 100%": {
+            transform: "rotate(0deg) scale(1)",
+          },
+          "25%": {
+            transform: "rotate(-5deg) scale(1.1)",
+          },
+          "75%": {
+            transform: "rotate(5deg) scale(1.1)",
+          },
+        },
+        "glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px hsla(260, 85%, 68%, 0.4)",
+          },
+          "50%": {
+            boxShadow: "0 0 40px hsla(260, 85%, 68%, 0.8)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bear-race": "bear-race 2s ease-out",
+        "bear-legs": "bear-legs 0.2s ease-in-out infinite",
+        "card-flip": "card-flip 0.6s ease-in-out",
+        "bounce-in": "bounce-in 0.6s ease-out",
+        "celebration": "celebration 0.5s ease-in-out",
+        "glow": "glow 2s ease-in-out infinite",
       },
     },
   },
